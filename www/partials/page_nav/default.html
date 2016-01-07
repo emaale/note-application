@@ -1,0 +1,22 @@
+<a href="#!" class="logo">Noted</a>
+
+<ul class="right">
+    <!-- Page header -->
+    <ul id="dropdown1" class="dropdown-content" ng-init="sortNotes('-added_at')">
+        <li><a href="#!" ng-click="sortNotes('-added_at')">Sort By Newer</a></li>
+        <li><a href="#!" ng-click="sortNotes('added_at')">Sort By Older</a></li>
+        <li><a href="#!">Settings</a></li>
+    </ul>
+
+    <!-- Search bar -->
+    <div class="search-bar input-field">
+        <input id="search" type="search" ng-model="search.text" required>
+
+        <label for="search" class="search-btn"><i class="material-icons">search</i></label>
+
+        <i class="close-btn material-icons">close</i>
+    </div>
+  
+    <!-- Dropdown Trigger -->
+    <li><a href="" class="dropdown-button" href="#!" data-activates="dropdown1" dropdown><i class="material-icons">more_vert</i></a></li>
+</ul>

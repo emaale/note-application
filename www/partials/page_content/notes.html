@@ -1,0 +1,19 @@
+<!-- List of notes -->
+<ul class="note-overview collection">
+	
+	<li class="collection-item" ng-repeat="note in notes | filter:search.text | orderBy:sort.options" ng-hide="note.deleted">
+		<a href="#" ui-sref="note({ id: note.id })">
+	    	<span class="title">{{ note.title }}</span>
+	    </a>
+
+	    <span class="date">{{ note.added_at | date:'mediumDate' }}</span>
+
+	    <p>{{ note.body | limitTo:30 }}...</p>
+
+	    <a href="#" class="delete" ng-click="deleteNote(note.id)"><i class="material-icons">delete</i></a>
+	</li>
+	
+</ul>
+
+<!-- Floating button that takes you to the new post page -->
+<a ui-sref="note-post()" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a>

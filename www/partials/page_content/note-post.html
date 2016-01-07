@@ -1,0 +1,24 @@
+<section class="note-post">
+	<div class="row">
+	    <form class="col s12">
+
+	    	<div class="row">
+	    	    <div class="input-field col s12">
+	        	  <input id="title" type="text" class="validate" ng-model="note.title" required>
+	         	 <label for="title">Title</label>
+	        	</div>
+	      	</div>
+
+	      	<div class="row">
+	            <div class="input-field col s12">
+	                <textarea id="body" class="materialize-textarea" ng-model="note.body" required></textarea>
+	                <label for="body">Note</label>
+	            </div>
+	       </div>
+
+	    </form>
+	</div>
+</section>
+
+<!-- Floating button that takes you to the new post page -->
+<a href="" ng-click="createNote()" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">done</i></a>

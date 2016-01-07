@@ -1,0 +1,138 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #E8EAF6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+}
+
+nav {
+    background: #3F51B5;
+}
+
+nav .logo { /* Page logo */
+    padding-left: 20px;
+    font-size: 26px;
+    font-weight: 200;
+}
+.btn-back {
+    width: 60px;
+    float: left;
+}
+.btn-back i {
+    width: 60px;
+    margin-left: 10px;
+}
+.search-bar {
+    position: absolute;
+    left: 100px;
+    right: 55px;
+}
+.search-bar .search-btn {
+    right: 0;
+    margin: 0;
+}
+.search-bar .search-btn i {
+    float: right;
+    padding-right: 15px;
+}
+.search-bar .search-btn.active i {
+    float: left;
+}
+.search-bar .close-btn {
+
+}
+
+.submit-btn {
+    width: 100%;
+    margin-bottom: 20px;
+    background: #3F51B5;
+}
+
+.collection {
+    padding: 5px 10px;
+    border: none;
+    clear: both;
+}
+.collection .collection-item {
+    background-color: white;
+    margin: 5px 0;
+    position: relative;
+}
+.collection .collection-item .date {
+    color: #9FA8DA;
+    float: right;
+    font-size: 10px;
+}
+.collection .collection-item .delete {
+    color: #EF5350;
+    float: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.collection .collection-item p {
+    border-top: 1px solid #E8EAF6;
+    padding: 10px 0 10px 0;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.dropdown-content li a {
+    color: black;
+    font-size: 14px;
+}
+.dropdown-content {
+    width: 150px;
+    border-radius: 2px;
+    margin-top: 5px;
+}
+
+.btn-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+}
+.btn-floating i { /* The floating add/edit button */
+    background: #303F9F;
+}
+
+.note-post {
+    background: white;
+}
+
+.input-field label {
+    margin-top: 10px;
+}
+
+/* Toast */
+.toast {
+    padding: 10px 25px;
+    background: #333;
+    bottom: 20px;
+    height: 30px;
+    position: fixed;
+    width: 100%;
+    max-width: 270px;
+    bottom: 10px;
+    top: auto;
+    left: 50%;
+    margin-left: -135px; /* Half of the width */
+}
+.toast > * {
+    float: left;
+    color: white;
+    padding: 0;
+    font-size: 14px;
+}
+.toast .toast-btn {
+    padding-left: 15px;
+    color: #00E676;
+    float: right;
+}
