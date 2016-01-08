@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     background: #E8EAF6;
+    overflow: hidden;
 }
 
 * {
@@ -12,12 +13,26 @@ a {
     color: black;
 }
 
+.page-content {
+    position: absolute;
+    top: 64px; /* Height of page_nav */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 nav {
     background: #3F51B5;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 nav .logo { /* Page logo */
     padding-left: 20px;
+    padding-top: 18px;
     font-size: 26px;
     font-weight: 200;
     margin: 0;
@@ -65,6 +80,7 @@ nav .logo { /* Page logo */
     background-color: white;
     margin: 5px 0;
     position: relative;
+    padding: 10px 20px;
 }
 .collection .collection-item .date {
     color: #9FA8DA;
@@ -99,6 +115,9 @@ nav .logo { /* Page logo */
     position: fixed;
     bottom: 20px;
     right: 10px;
+}
+.btn-floating:active {
+    box-shadow: 3px 3px #999;
 }
 .btn-floating i { /* The floating add/edit button */
     background: #303F9F;
