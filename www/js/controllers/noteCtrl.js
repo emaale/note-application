@@ -11,6 +11,9 @@ app.controller('NoteCtrl', ['$scope', 'notes', '$state', '$stateParams', 'search
 	// Get the location so we can use it for later when we create new notes
 	$scope.location = location;
 
+	// Reset the location
+	location.reset();
+
 	// If we are requesting a specific note
 	if($stateParams.id) $scope.note = notes.get($stateParams.id);
 
@@ -50,7 +53,7 @@ app.controller('NoteCtrl', ['$scope', 'notes', '$state', '$stateParams', 'search
 		if($scope.location.location && $scope.note.body != "") {
 			// Create a new note
 			var note = notes.post({
-				"title": $scope.location.location,
+				"title": $scope.location.db,
 				"body": $scope.note.body,
 				"added_at": new Date()
 			});
