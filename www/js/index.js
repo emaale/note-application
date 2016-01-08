@@ -58,6 +58,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: "NoteCtrl",
         }
       }
+    })
+    .state('settings', {
+      url: "/settings",
+      views: {
+        "page_nav": {
+            templateUrl: "partials/page_nav/settings.html",
+            controller: "NavCtrl",
+        },
+        "page_content": {
+            templateUrl: "partials/page_content/settings.html",
+            controller: "NoteCtrl",
+        }
+      }
     });
 
 });

@@ -1,17 +1,17 @@
 <section class="note-post">
 	<div class="row">
-	    <form class="col s12">
+	    <form class="note-form col s12">
 
 	    	<div class="row">
 	    	    <div class="input-field col s12">
 	        	  <input id="title" type="text" class="validate" ng-model="location.location" required>
-	         	 <label for="title">Title</label>
+	         	 <label for="title" class="active">Title</label>
 	        	</div>
 	      	</div>
 
 	      	<div class="row">
 	            <div class="input-field col s12">
-	                <textarea id="body" class="materialize-textarea" ng-model="note.body" required></textarea>
+	                <textarea id="body" class="materialize-textarea" ng-model="note.body" ng-init="note.body = ''" required> </textarea>
 	                <label for="body">Note</label>
 	            </div>
 	       </div>

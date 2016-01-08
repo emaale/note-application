@@ -20,6 +20,7 @@ nav .logo { /* Page logo */
     padding-left: 20px;
     font-size: 26px;
     font-weight: 200;
+    margin: 0;
 }
 .btn-back {
     width: 60px;
@@ -111,6 +112,14 @@ nav .logo { /* Page logo */
     margin-top: 10px;
 }
 
+/* Forms */
+.note-form {
+    margin-top: 20px;
+}
+.ng-touched.ng-invalid {
+
+}
+
 /* Toast */
 .toast {
     padding: 10px 25px;
@@ -119,11 +128,11 @@ nav .logo { /* Page logo */
     height: 30px;
     position: fixed;
     width: 100%;
-    max-width: 270px;
+    max-width: 300px;
     bottom: 10px;
     top: auto;
     left: 50%;
-    margin-left: -135px; /* Half of the width */
+    margin-left: -150px; /* Half of the width */
 }
 .toast > * {
     float: left;

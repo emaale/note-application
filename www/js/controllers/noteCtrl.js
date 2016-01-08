@@ -46,7 +46,7 @@ app.controller('NoteCtrl', ['$scope', 'notes', '$state', '$stateParams', 'search
 	// Creates a new note
 	$scope.createNote = function() {
 		// Validate fields
-		if($scope.note.title && $scope.note.body) {
+		if($scope.location.location && $scope.note.body != "") {
 			// Create a new note
 			var note = notes.post({
 				"title": $scope.location.location,
