@@ -5,6 +5,7 @@ app.controller('NoteCtrl', ['$scope', 'notes', '$state', '$stateParams', 'search
 	// Used for searching all the posts from the search bar
 	$scope.search = search;
 
+	// Used for sorting all the posts
 	$scope.sort = sort;
 
 	// Get the location so we can use it for later when we create new notes
