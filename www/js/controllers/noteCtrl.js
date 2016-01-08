@@ -1,4 +1,4 @@
-app.controller('NoteCtrl', ['$scope', 'notes', '$state', '$stateParams', 'search', 'sort', 'toast', function($scope, notes, $state, $stateParams, search, sort, toast) {
+app.controller('NoteCtrl', ['$scope', 'notes', '$state', '$stateParams', 'search', 'sort', 'toast', 'location', function($scope, notes, $state, $stateParams, search, sort, toast, location) {
 	// Get all notes
 	$scope.notes = notes.getAll();
 
@@ -6,6 +6,9 @@ app.controller('NoteCtrl', ['$scope', 'notes', '$state', '$stateParams', 'search
 	$scope.search = search;
 
 	$scope.sort = sort;
+
+	// Get the location so we can use it for later when we create new notes
+	$scope.location = location;
 
 	// If we are requesting a specific note
 	if($stateParams.id) $scope.note = notes.get($stateParams.id);
@@ -46,7 +49,7 @@ app.controller('NoteCtrl', ['$scope', 'notes', '$state', '$stateParams', 'search
 		if($scope.note.title && $scope.note.body) {
 			// Create a new note
 			var note = notes.post({
-				"title": $scope.note.title,
+				"title": $scope.location.location,
 				"body": $scope.note.body,
 				"added_at": new Date()
 			});
