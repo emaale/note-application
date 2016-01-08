@@ -115,6 +115,7 @@ nav .logo { /* Page logo */
     position: fixed;
     bottom: 20px;
     right: 10px;
+    z-index: 999;
 }
 .btn-floating:active {
     box-shadow: 3px 3px #999;
@@ -152,6 +153,7 @@ nav .logo { /* Page logo */
     top: auto;
     left: 50%;
     margin-left: -150px; /* Half of the width */
+    z-index: 1001;
 }
 .toast > * {
     float: left;
