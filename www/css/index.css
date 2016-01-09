@@ -33,13 +33,19 @@ nav {
     z-index: 1000;
 }
 nav h1 { /* Page logo */
-    padding-top: 18px;
+    padding-top: 16px;
     padding-left: 5px;
     font-size: 26px;
     font-weight: 200;
     margin: 0;
     display: inline-block;
 }
+
+.btn {
+    margin-right: 10px;
+    padding: 0 20px;
+}
+
 .btn-back {
     width: 32px;
     float: left;
@@ -132,10 +138,18 @@ nav h1 { /* Page logo */
 
 .note-post {
     background: white;
+    padding: 0 20px 30px 20px;
+}
+
+.section {
+    padding: 20px 0 30px 0;
 }
 
 .input-field label {
     margin-top: 10px;
+}
+.file-field {
+    margin-top: 0;
 }
 
 /* Forms */
