@@ -5,10 +5,10 @@
 	    	<div class="section">
 	    	    <p>Enable the use of location to name your notes</p>
 
-	    	    <div class="switch">
+	    	    <div class="switch" ng-click="changeSetting('enableLocation', $scope.settings.enableLocation)">
 	    	        <label>
 	    	          Off
-	    	          <input type="checkbox">
+	    	          <input type="checkbox" ng-model="settings.enableLocation">
 	    	          <span class="lever"></span>
 	    	          On
 	    	        </label>
@@ -21,10 +21,10 @@
 	    	<div class="section">
 	    	    <p>Enable deletion notification (incase you accidentally press delete on one of the notes)</p>
 
-	    	    <div class="switch">
+	    	    <div class="switch" ng-click="changeSetting('enableToasts', $scope.settings.enableToasts)">
 	    	        <label>
 	    	          Off
-	    	          <input type="checkbox">
+	    	          <input type="checkbox" ng-model="settings.enableToasts">
 	    	          <span class="lever"></span>
 	    	          On
 	    	        </label>
