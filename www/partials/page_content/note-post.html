@@ -4,8 +4,9 @@
 
 	    	<div class="row">
 	    	    <div class="input-field col s12">
-	        	  <input id="title" type="text" class="validate" ng-model="location.db" required>
-	         	 <label for="title" class="active">Title</label>
+	        	  	<input type="text" class="validate" ng-model="note.title" ng-hide="settings.enableLocation" required>
+	        	  	<input type="text" class="validate" ng-model="location.db" ng-show="settings.enableLocation" required>
+	         	 	<label for="title" class="active">Title</label>
 	        	</div>
 	      	</div>
 

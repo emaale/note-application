@@ -1,8 +1,13 @@
-app.factory('notes', ['$localStorage', function($localStorage) {	
+app.factory('notes', ['$localStorage', '$firebaseArray', function($localStorage, $firebaseArray) {	
 	o = {
-		notes: []
+		notes: [],
+		firebaseArray: "",
 	};
-	//$localStorage.notes = []; // Clears the localstoragez`
+	
+	// Get notes from firebase and start 3-way binding
+	/*var ref = new Firebase("https://sizzling-heat-7045.firebaseio.com/notes");
+	o.firebaseArray = $firebaseArray(ref);*/
+
 	o.get = function(id) {
 		return $localStorage.notes[id]; 
 	};
@@ -15,7 +20,7 @@ app.factory('notes', ['$localStorage', function($localStorage) {
 		// Save to local storage
 		if(!Array.isArray($localStorage.notes)) $localStorage.notes = []; // Make sure array exists before we push to it
 		if(!Array.isArray(o.notes)) o.notes = []; // Make sure array exists before we push to it
-
+		console.log("sdfsdfsd");
 		// Give the post an id
 		post.id = $localStorage.notes.length;
 
@@ -24,6 +29,7 @@ app.factory('notes', ['$localStorage', function($localStorage) {
 
 		// Add to the factorys notes
 		o.notes.push(post);
+		
 
 		return post;
 	};
