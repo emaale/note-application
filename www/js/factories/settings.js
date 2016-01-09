@@ -3,16 +3,14 @@ app.factory('settings', ['$localStorage', function($localStorage) {
 		"enableLocation": true,
 		"enableToasts": true,
 	};
-	
-	// Sets a setting
-	o.changeSetting = function(key, value) {
-		// Update localstorage and o
-		$localStorage.settings[key] = value;
-		o[key] = value;
-	};
 
-	// Read the data from localStorage
-	o = $localStorage.settings;
+	// If previous settings have been saved to localStorage we want to fetch those instead, otherwise use defaults
+	if($localStorage.settings != null) {
+		o = $localStorage.settings;
+	} else {
+		// Save the defaults into localStorage
+		$localStorage.settings = o;
+	}
 
 	return o;
 }]);

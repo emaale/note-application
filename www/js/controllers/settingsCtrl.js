@@ -1,11 +1,4 @@
 app.controller('SettingsCtrl', ['$scope', 'settings', function($scope, settings) {
+	// Connect the settings page with the settings service, so that the settings can be used on other pages
 	$scope.settings = settings;
-
-	// Changes the setting
-	$scope.changeSetting = function(key, value) {
-		// Change the setting
-		console.log(settings);
-		$scope.settings.changeSetting(key, value);
-		
-	};
 }]);
