@@ -1,4 +1,4 @@
-var app = angular.module('noteApp', ['ui.router', 'ngStorage']);
+var app = angular.module('noteApp', ['ui.router', 'ngStorage', 'firebase']);
 
 
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -68,7 +68,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         },
         "page_content": {
             templateUrl: "partials/page_content/settings.html",
-            controller: "NoteCtrl",
+            controller: "SettingsCtrl",
         }
       }
     });
