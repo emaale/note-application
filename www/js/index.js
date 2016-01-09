@@ -24,7 +24,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/note/:id",
       views: {
         "page_nav": {
-            templateUrl: "partials/page_nav/subpage.html",
+            templateUrl: "partials/page_nav/note.html",
             controller: "NavCtrl",
         },
         "page_content": {
@@ -37,7 +37,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/note/:id/edit",
       views: {
         "page_nav": {
-            templateUrl: "partials/page_nav/subpage.html",
+            templateUrl: "partials/page_nav/note-edit.html",
             controller: "NavCtrl",
         },
         "page_content": {
@@ -50,7 +50,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/new",
       views: {
         "page_nav": {
-            templateUrl: "partials/page_nav/subpage.html",
+            templateUrl: "partials/page_nav/note-post.html",
             controller: "NavCtrl",
         },
         "page_content": {

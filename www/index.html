@@ -19,23 +19,22 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 
         <title>Noted - Note taking application</title>
+
     </head>
     <body ng-app="noteApp">
         
         <!-- Page Wrapper -->
         <div class="page-wrapper">
 
-            <nav>
-                <div class="nav-wrapper" ui-view="page_nav">
-                    
-                </div>
-            </nav>
+            <!-- Page Header -->
+            <nav><div class="nav-wrapper" ui-view="page_nav"></div></nav>
 
             <!-- Page Content -->
             <section class="page-content" ui-view="page_content"></section>
+
         </div>
 
-        <!-- Toaster that can be used throughout the application -->
+        <!-- Toast that can be used throughout the application -->
         <div toast></div>
 
         <!-- Angular and ui-router -->
