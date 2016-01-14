@@ -1,18 +1,18 @@
-app.factory('notes', ['$localStorage', '$firebaseArray', 'notesFirebase', function($localStorage, $firebaseArray, notesFirebase) {	
+app.factory('notes', ['$localStorage', '$firebaseArray', function($localStorage, $firebaseArray) {	
 	o = {
 		notes: [],
+		firebaseArray: "",
 	};
+	
+	// Get notes from firebase and start 3-way binding
+	/*var ref = new Firebase("https://sizzling-heat-7045.firebaseio.com/notes");
+	o.firebaseArray = $firebaseArray(ref);*/
 
 	o.get = function(id) {
-		$localStorage.notes[id] = notesFirebase.get(id);
-
 		return $localStorage.notes[id]; 
 	};
 
 	o.getAll = function() {
-		// Fetch cloud data
-		$localStorage.notes = notesFirebase.getAll();
-
 		return $localStorage.notes;
 	};
 
@@ -20,7 +20,7 @@ app.factory('notes', ['$localStorage', '$firebaseArray', 'notesFirebase', functi
 		// Save to local storage
 		if(!Array.isArray($localStorage.notes)) $localStorage.notes = []; // Make sure array exists before we push to it
 		if(!Array.isArray(o.notes)) o.notes = []; // Make sure array exists before we push to it
-		
+		console.log("sdfsdfsd");
 		// Give the post an id
 		post.id = $localStorage.notes.length;
 
@@ -29,9 +29,7 @@ app.factory('notes', ['$localStorage', '$firebaseArray', 'notesFirebase', functi
 
 		// Add to the factorys notes
 		o.notes.push(post);
-
-		// Update the cloud
-		notesFirebase.post(post);
+		
 
 		return post;
 	};

@@ -71,20 +71,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: "SettingsCtrl",
         }
       }
-    })
-    .state('login', {
-      url: '/login',
-      view: {
-        controller: 'AuthCtrl',
-        templateUrl: 'partials/auth/login.html'
-      }
-    })
-    .state('register', {
-      url: '/register',
-      view: {
-        controller: 'AuthCtrl',
-        templateUrl: 'partials/auth/register.html'
-      }
     });
 
 });
