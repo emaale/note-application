@@ -34,10 +34,14 @@ nav {
 }
 nav h1 { /* Page logo */
     padding-top: 16px;
-    padding-left: 5px;
+    padding-left: 20px;
+    padding-bottom: 24px;
+    padding-right: 10px;
     font-size: 26px;
     font-weight: 200;
     margin: 0;
+    margin-left: -15px; /* To account for the positioning */
+    position: relative;
     display: inline-block;
 }
 
@@ -55,22 +59,30 @@ nav h1 { /* Page logo */
 }
 .search-bar {
     position: absolute;
-    left: 100px;
+    left: 0;
     right: 55px;
+}
+.search-bar #search {
+
 }
 .search-bar .search-btn {
     right: 0;
     margin: 0;
+    z-index: 9000;
 }
 .search-bar .search-btn i {
     float: right;
     padding-right: 15px;
 }
+.search-bar .close-btn {
+    z-index: 9001;
+    display: none;
+}
+.search-bar .close-btn.active {
+    display: block;
+}
 .search-bar .search-btn.active i {
     float: left;
-}
-.search-bar .close-btn {
-
 }
 
 .submit-btn {

@@ -1,12 +1,8 @@
-app.factory('notes', ['$localStorage', '$firebaseArray', function($localStorage, $firebaseArray) {	
+app.factory('notes', ['$localStorage', function($localStorage) {	
 	o = {
 		notes: [],
 		firebaseArray: "",
 	};
-	
-	// Get notes from firebase and start 3-way binding
-	/*var ref = new Firebase("https://sizzling-heat-7045.firebaseio.com/notes");
-	o.firebaseArray = $firebaseArray(ref);*/
 
 	o.get = function(id) {
 		return $localStorage.notes[id]; 
@@ -29,7 +25,6 @@ app.factory('notes', ['$localStorage', '$firebaseArray', function($localStorage,
 
 		// Add to the factorys notes
 		o.notes.push(post);
-		
 
 		return post;
 	};

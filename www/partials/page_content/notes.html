@@ -12,8 +12,11 @@
 		    <p>{{ note.body | limitTo:30 }}...</p>
 
 		    <a href="#" class="delete" ng-click="deleteNote(note.id)"><i class="material-icons">delete</i></a>
-		</li>	
-	</div>	
+		</li>
+	</div>
+
+	<!-- If list is empty we need to let the user know, we need two different ones for search and just empty -->
+	
 	
 </ul>
 
