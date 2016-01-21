@@ -6,11 +6,15 @@ body {
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Make sure elements include border when calculating widths */
 }
 
 a {
     color: black;
+}
+
+ol {
+    padding-left: 20px; /* Align it with the other padding on the pages, so that it matches other elements */
 }
 
 .page-content {
