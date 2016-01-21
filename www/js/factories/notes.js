@@ -11,14 +11,16 @@ app.factory('notes', ['$localStorage', function($localStorage) {
 	o.getAll = function() {
 		return $localStorage.notes;
 	};
-
+	
 	o.post = function(post) {
 		// Save to local storage
 		if(!Array.isArray($localStorage.notes)) $localStorage.notes = []; // Make sure array exists before we push to it
 		if(!Array.isArray(o.notes)) o.notes = []; // Make sure array exists before we push to it
-		console.log("sdfsdfsd");
+		
 		// Give the post an id
 		post.id = $localStorage.notes.length;
+
+		post.deleted = false;
 
 		// Push to the array
 		$localStorage.notes.push(post);

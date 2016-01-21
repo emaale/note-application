@@ -1,7 +1,7 @@
 <!-- List of notes -->
 <ul class="note-overview collection row">
 	
-	<div class="col s12 m6 l4" ng-repeat="note in notes | filter:search.text | orderBy:sort.options" ng-hide="note.deleted">
+	<div class="col s12 m6 l4" ng-repeat="note in results = (notes | filter:{ body: search.text, deleted: false } | orderBy:sort.options)">
 		<li class="collection-item">
 			<a href="#" ui-sref="note({ id: note.id })">
 		    	<span class="title">{{ note.title }}</span>
@@ -16,7 +16,8 @@
 	</div>
 
 	<!-- If list is empty we need to let the user know, we need two different ones for search and just empty -->
-	
+	<p ng-show="results.length == 0 && search.text.length == 0">You currently have no notes, to add a new note click the "+" in the right corner!</p>
+	<p ng-show="results.length == 0 && search.text.length > 0">Your search yielded no results, please try a different phrase.</p>
 	
 </ul>
 
