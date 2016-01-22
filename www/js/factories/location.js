@@ -20,16 +20,16 @@ app.factory('location', ['$http', 'settings', 'toast', function($http, settings,
 		if(error.code == error.PERMISSION_DENIED) {
 			console.log(navigator.notification);
 		    // If an error occurs, we need to notify the user that the GPS is disabled
-		    if(navigator.notification) { // On mobile devices we need to use navigator.notification.alert instead of alert
-		    	navigator.notification.alert(
-		    		"Location disabled in the devices settings. To stop getting these messages, disable the location setting in the applications settings.",
-		    		function() {}
-		    	);
-		    } else {
-		    	alert("dfsfd");
-		    }
-
-			
+		    
+	    	navigator.notification.alert(
+	    		"Location disabled in the devices settings. To stop getting these messages, disable the location setting in the applications settings.",
+	    		function() {}
+	    	);
+		} else {
+			navigator.notification.alert(
+	    		"Other error",
+	    		function() {}
+	    	);
 		}
 	};
 
