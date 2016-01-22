@@ -20,15 +20,20 @@ app.factory('location', ['$http', 'settings', 'toast', function($http, settings,
 		if(error.code == error.PERMISSION_DENIED) {
 			console.log("Error");
 		    // If an error occurs, we need to notify the user that the GPS is disabled
-			alert("Location disabled in the devices settings. To stop getting these messages, disable the location setting in the applications settings."); 
+			navigator.notification.alert(
+				"Location disabled in the devices settings. To stop getting these messages, disable the location setting in the applications settings.",
+				function() {}
+			);
 		}
 	};
-	
+
+	// Start watching location
 	l.startWatch = function() {
 		console.log("Started watching");
 		l.watchID = navigator.geolocation.watchPosition(l.success, l.error, { maximumAge: 0, timeout: 3000, enableHighAccuracy: false });
 	};
 
+	// Stop watching location
 	l.stopWatch = function() {
 		console.log("Stopped watching");
 		l.watchID = null;
