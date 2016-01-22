@@ -125,6 +125,10 @@ nav h1 { /* Page logo */
     font-size: 12px;
 }
 
+.dropdown-content {
+    position: absolute;
+    z-index: 11000; /* Makes sure its always on top of everything else */
+}
 .dropdown-content li a {
     color: black;
     font-size: 14px;
