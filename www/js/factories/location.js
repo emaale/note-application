@@ -15,11 +15,14 @@ app.factory('location', ['$http', 'settings', 'toast', function($http, settings,
 
 	// Error function
 	l.error = function(error) {
-		// Notify user that location isnt working, which is an indicator that it hasnt been enabled in the devices settings
-    	navigator.notification.alert(
-    		"Location disabled in the devices settings. To stop getting these messages, disable the location setting in the applications settings.",
-    		function() {}
-    	);
+		// Make sure its a timeout error, which indicates location is turned off
+		if(error.code == error.TIMEOUT) {
+			// Notify user that location isnt working
+	    	navigator.notification.alert(
+	    		"Location disabled in the devices settings. To stop getting these messages, disable the location setting in the applications settings, or enable it in the devices settings.",
+	    		function() {}
+	    	);
+		}
 	};
 
 	// Start watching location
