@@ -1,4 +1,4 @@
-var app = angular.module('noteApp', ['ui.router', 'ngStorage', 'firebase']);
+var app = angular.module('noteApp', ['ui.router', 'ngStorage']);
 
 
 app.config(function($stateProvider, $urlRouterProvider) {
