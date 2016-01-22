@@ -27,17 +27,24 @@ app.controller('NoteCtrl', ['$scope', 'notes', '$state', '$stateParams', 'search
 	}
 
 	// Updates a specific note
-	$scope.updateNote = function(id) {
-		// Update note
-		notes.update(id, {
-			"title": $scope.note.title,
-			"body": $scope.note.body,
-			"added_at": Date(),
-			"id": $stateParams.id
-		});
+	$scope.updateNote = function() {
+		console.log($scope.updatedNote.title);
+		// Make sure title and body is filled in 
+		if($scope.updatedNote.title != "" && $scope.updatedNote.body != "") {
+			// Update note
+			notes.update($stateParams.id, {
+				"title": $scope.updatedNote.title,
+				"body": $scope.updatedNote.body,
+				"added_at": Date(),
+				"id": $stateParams.id
+			});
 
-		// Go to that specific note
-		$state.go("note", { id: $stateParams.id });
+			// Go to that specific note
+			$state.go("note", { id: $stateParams.id });
+		} else {
+			// Set error
+			$scope.error = "Fill in all fields corrrectly.";
+		}
 	};
 
 	// Deletes a specific note
