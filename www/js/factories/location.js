@@ -26,7 +26,7 @@ app.factory('location', ['$http', 'settings', 'toast', function($http, settings,
 	// Start watching location
 	l.startWatch = function() {
 		console.log("Started watching");
-		l.watchID = navigator.geolocation.watchPosition(l.success, l.error, { maximumAge: 0, timeout: 3000, enableHighAccuracy: false });
+		l.watchID = navigator.geolocation.watchPosition(l.success, l.error, { maximumAge: 0, timeout: 1000, enableHighAccuracy: false });
 	};
 
 	// Stop watching location
