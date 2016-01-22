@@ -7,7 +7,6 @@ app.factory('location', ['$http', 'settings', 'toast', function($http, settings,
 	
 	// Success function
 	l.success = function(position) {
-	    console.log("Success");
 	    return $http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&result_type=locality&key=AIzaSyB19RbpY_MDENXQgby3ik_BsoaGuZEaZ3c").success(function(data) {
 	    	l.location = data.results[0].formatted_address;
 	    	l.db = l.location; // Save the location to the databinding
@@ -25,14 +24,13 @@ app.factory('location', ['$http', 'settings', 'toast', function($http, settings,
 
 	// Start watching location
 	l.startWatch = function() {
-		console.log("Started watching");
-		l.watchID = navigator.geolocation.watchPosition(l.success, l.error, { maximumAge: 0, timeout: 1000, enableHighAccuracy: false });
+		// Store the ID so we can clear it later
+		l.watchID = navigator.geolocation.watchPosition(l.success, l.error, { maximumAge: 60000, timeout: 1000, enableHighAccuracy: false });
 	};
 
 	// Stop watching location
 	l.stopWatch = function() {
-		console.log("Stopped watching");
-		l.watchID = null;
+		l.watchID = null; // Clear id, so watching stops
 	};
 
 	// Resets the databinding to the location
