@@ -27,7 +27,8 @@ app.factory('location', ['$http', function($http) {
 	                      'message: ' + error.message + '\n');
 	}
 
-	navigator.geolocation.getCurrentPosition(onSuccess, onError);
+	// Try to get precise location using GPS, otherwise use Network based Geolocation
+	navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3600000, timeout: 5000, enableHighAccuracy: true });
 	
 	l.reset = function() {
 		l.db = l.location; // Save the location to the databinding
