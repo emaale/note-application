@@ -16,21 +16,11 @@ app.factory('location', ['$http', 'settings', 'toast', function($http, settings,
 
 	// Error function
 	l.error = function(error) {
-		// Make sure it's a permission error, if so, we want to help the user enable it
-		if(error.code == error.PERMISSION_DENIED) {
-			console.log(navigator.notification);
-		    // If an error occurs, we need to notify the user that the GPS is disabled
-		    
-	    	navigator.notification.alert(
-	    		"Location disabled in the devices settings. To stop getting these messages, disable the location setting in the applications settings.",
-	    		function() {}
-	    	);
-		} else {
-			navigator.notification.alert(
-	    		"Other error",
-	    		function() {}
-	    	);
-		}
+		// Notify user that location isnt working, which is an indicator that it hasnt been enabled in the devices settings
+    	navigator.notification.alert(
+    		"Location disabled in the devices settings. To stop getting these messages, disable the location setting in the applications settings.",
+    		function() {}
+    	);
 	};
 
 	// Start watching location
