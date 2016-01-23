@@ -1,11 +1,11 @@
-<a href="" ui-sref="notes" class="btn-back"><i class="material-icons">arrow_back</i></a>
+<a href="" data-ui-sref="notes" title="Takes you back to the Note List Page" class="btn-back"><i class="material-icons">arrow_back</i></a>
 
 <ul class="right">
     <!-- Page header -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!" ui-sref="settings">Settings</a></li>
+        <li><a href="#!" data-ui-sref="settings" title="Takes you to the Settings Page">Settings</a></li>
     </ul>
 
     <!-- Dropdown Trigger -->
-    <li><a href="" class="dropdown-button" href="#!" data-activates="dropdown1" dropdown><i class="material-icons">more_vert</i></a></li>
+    <li><a class="dropdown-button" href="#!" data-activates="dropdown1" title="Opens the dropdown menu with misc settings" data-dropdown><i class="material-icons">more_vert</i></a></li>
 </ul>

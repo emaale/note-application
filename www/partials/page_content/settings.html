@@ -5,10 +5,11 @@
 	    	<div class="section">
 	    	    <p>Enable the use of location to name your notes</p>
 
+	    	    <!-- Switch for setting -->
 	    	    <div class="switch">
 	    	        <label>
 	    	          Off
-	    	          <input type="checkbox" ng-model="settings.enableLocation" ng-click="changeLocationSetting()">
+	    	          <input type="checkbox" data-ng-model="settings.enableLocation" data-ng-click="changeLocationSetting()" class="settings-input">
 	    	          <span class="lever"></span>
 	    	          On
 	    	        </label>
@@ -21,10 +22,11 @@
 	    	<div class="section">
 	    	    <p>Enable deletion notification (incase you accidentally press delete on one of the notes)</p>
 
+	    	    <!-- Switch for setting -->
 	    	    <div class="switch">
 	    	        <label>
 	    	          Off
-	    	          <input type="checkbox" ng-model="settings.enableToasts">
+	    	          <input type="checkbox" data-ng-model="settings.enableToasts" class="settings-input">
 	    	          <span class="lever"></span>
 	    	          On
 	    	        </label>
@@ -33,7 +35,7 @@
 
 	    	<div class="divider"></div>
 
-	    	<!-- Information about how you can unpack and look through the applikation -->
+	    	<!-- Information about how you can unpack and look through the application -->
 	    	<div class="section">
 	    		<p>If you for security reasons want to look through the source code of the application, you can do so by following the steps below:</p>
 

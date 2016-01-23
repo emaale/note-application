@@ -17,6 +17,19 @@ ol {
     padding-left: 20px; /* Align it with the other padding on the pages, so that it matches other elements */
 }
 
+.settings-input {
+    height: 20px !important;
+    width: 200px !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    background: blue !important;
+}
+.settings-input:focus { /* We want to change the position when focused, so they can see that its actually there */
+    left: -20px !important;
+    margin-top: -15px;
+}
+
 .page-content {
     position: absolute;
     top: 64px; /* Height of page_nav */
@@ -164,7 +177,7 @@ nav h1 { /* Page logo */
     font-size: 16px;
     font-weight: 500;
 }
-.note-overview > p {
+.note-overview ~ p {
     max-width: 200px;
     margin: 20px auto;
     text-align: center;

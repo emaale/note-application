@@ -6,11 +6,11 @@
 	    	    <div class="input-field col s12">
 	    	    	<h5>Title</h5>
 
-	        	  	<input id="title" name="title" type="text" ng-model="note.title" ng-hide="settings.enableLocation" ng-disabled="settings.enableLocation" required>
-	        	  	<input id="title" name="title" type="text" ng-model="location.db" ng-show="settings.enableLocation" required>
+	        	  	<input name="title" type="text" data-ng-model="note.title" data-ng-hide="settings.enableLocation" data-ng-disabled="settings.enableLocation" required>
+	        	  	<input name="title" type="text" data-ng-model="location.db" data-ng-show="settings.enableLocation" required>
 
-	        	  	<i ng-show="myForm.title.$valid" ng-hide="myForm.title.$error" class="material-icons validation-icon validation-icon-valid">done</i>
-	        	  	<i ng-show="myForm.title.$error" ng-hide="myForm.title.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
+	        	  	<i data-ng-show="myForm.title.$valid" data-ng-hide="myForm.title.$error" class="material-icons validation-icon validation-icon-valid">done</i>
+	        	  	<i data-ng-show="myForm.title.$error" data-ng-hide="myForm.title.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
 	        	</div>
 	      	</div>
 
@@ -18,14 +18,14 @@
 	            <div class="input-field col s12">
 	            	<h5>Note</h5>
 
-	                <textarea id="body" name="body" class="materialize-textarea" ng-model="note.body" ng-init="note.body = ''" required> </textarea>
+	                <textarea id="body" name="body" class="materialize-textarea" data-ng-model="note.body" data-ng-init="note.body = ''" required> </textarea>
 
-	                <i ng-show="myForm.body.$valid" ng-hide="myForm.body.$error" class="material-icons validation-icon validation-icon-valid">done</i>
-	        	  	<i ng-show="myForm.body.$error" ng-hide="myForm.body.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
+	                <i data-ng-show="myForm.body.$valid" data-ng-hide="myForm.body.$error" class="material-icons validation-icon validation-icon-valid">done</i>
+	        	  	<i data-ng-show="myForm.body.$error" data-ng-hide="myForm.body.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
 	            </div>
 	       </div>
 
-	       <div class="row" ng-show="error">
+	       <div class="row" data-ng-show="error">
 	       		<p class="error">{{ error }}</p>
 	       </div>
 	    </form>
@@ -33,4 +33,4 @@
 </section>
 
 <!-- Floating button that takes you to the new post page -->
-<a href="" ng-click="createNote()" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">done</i></a>
+<a href="" title="Creates note after filling in fields properly" data-ng-click="createNote()" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">done</i></a>

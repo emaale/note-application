@@ -5,10 +5,10 @@
     	    <div class="input-field col s12">
         	   <h5>Title</h5>
 
-               <input disabled id="title" name="title" type="text" class="validate" ng-model="note.title" placeholder="{{ note.title }}" required>
+               <input disabled id="title" name="title" type="text" class="validate" data-ng-model="note.title" placeholder="{{ note.title }}" required>
 
-               <i ng-show="myForm.title.$valid" ng-hide="myForm.title.$error" class="material-icons validation-icon validation-icon-valid">done</i>
-               <i ng-show="myForm.title.$error" ng-hide="myForm.title.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
+               <i data-ng-show="myForm.title.$valid" data-ng-hide="myForm.title.$error" class="material-icons validation-icon validation-icon-valid">done</i>
+               <i data-ng-show="myForm.title.$error" data-ng-hide="myForm.title.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
         	</div>
       	</div>
 
@@ -16,10 +16,10 @@
             <div class="input-field col s12">
                 <h5>Note</h5>
 
-                <textarea disabled id="body" name="body" class="materialize-textarea" ng-model="note.body" placeholder="{{ note.body }}" required></textarea>
+                <textarea disabled id="body" name="body" class="materialize-textarea" data-ng-model="note.body" placeholder="{{ note.body }}" required></textarea>
 
-                <i ng-show="myForm.body.$valid" ng-hide="myForm.body.$error" class="material-icons validation-icon validation-icon-valid">done</i>
-                <i ng-show="myForm.body.$error" ng-hide="myForm.body.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
+                <i data-ng-show="myForm.body.$valid" data-ng-hide="myForm.body.$error" class="material-icons validation-icon validation-icon-valid">done</i>
+                <i data-ng-show="myForm.body.$error" data-ng-hide="myForm.body.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
             </div>
        </div>
     </form>
@@ -27,4 +27,4 @@
 </section>
 
 <!-- Floating button that takes you to the new post page -->
-<a ui-sref="note-edit({ id: note.id })" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">edit</i></a>
+<a data-ui-sref="note-edit({ id: note.id })" title="Takes you to the Edit Note Page" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">edit</i></a>

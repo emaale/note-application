@@ -6,10 +6,10 @@
 	    	    <div class="input-field col s12">
 	    	    	<h5>Title</h5>
 
-	        	 	<input id="title" name="title" type="text" class="validate" ng-init="updatedNote.title = note.title" ng-model="updatedNote.title" required>
+	        	 	<input id="title" name="title" type="text" class="validate" data-ng-init="updatedNote.title = note.title" data-ng-model="updatedNote.title" required>
 
-	        	 	<i ng-show="myForm.title.$valid" ng-hide="myForm.title.$error" class="material-icons validation-icon validation-icon-valid">done</i>
-	        	  	<i ng-show="myForm.title.$error" ng-hide="myForm.title.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
+	        	 	<i data-ng-show="myForm.title.$valid" data-ng-hide="myForm.title.$error" class="material-icons validation-icon validation-icon-valid">done</i>
+	        	  	<i data-ng-show="myForm.title.$error" data-ng-hide="myForm.title.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
 	        	</div>
 	      	</div>
 
@@ -17,10 +17,10 @@
 	            <div class="input-field col s12">
 	            	<h5>Note</h5>
 
-	                <textarea id="body" name="body" class="materialize-textarea" ng-init="updatedNote.body = note.body" ng-model="updatedNote.body" required></textarea>
+	                <textarea id="body" name="body" class="materialize-textarea" data-ng-init="updatedNote.body = note.body" data-ng-model="updatedNote.body" required></textarea>
 
-	                <i ng-show="myForm.body.$valid" ng-hide="myForm.body.$error" class="material-icons validation-icon validation-icon-valid">done</i>
-	        	  	<i ng-show="myForm.body.$error" ng-hide="myForm.body.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
+	                <i data-ng-show="myForm.body.$valid" data-ng-hide="myForm.body.$error" class="material-icons validation-icon validation-icon-valid">done</i>
+	        	  	<i data-ng-show="myForm.body.$error" data-ng-hide="myForm.body.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
 	            </div>
 	       </div>
 	    </form>
@@ -28,4 +28,4 @@
 </section>
 
 <!-- Floating button that takes you to the new post page -->
-<a href="" ng-click="updateNote()" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">done</i></a>
+<a href="" title="Update changed note" data-ng-click="updateNote()" class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">done</i></a>
