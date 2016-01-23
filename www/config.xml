@@ -51,8 +51,6 @@
   <access origin="https://fonts.gstatic.com/s/materialicons/v11/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2"/>
   <access origin="https://maps.googleapis.com"/>
 
-  <allow-intent href="http://*/*"/>
-  <allow-intent href="https://*/*"/>
   <allow-intent href="geo:*"/>
 
   <platform name="android" />
