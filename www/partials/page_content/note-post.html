@@ -6,8 +6,8 @@
 	    	    <div class="input-field col s12">
 	    	    	<h5>Title</h5>
 
-	        	  	<input name="title" type="text" data-ng-model="note.title" data-ng-hide="settings.enableLocation" data-ng-disabled="settings.enableLocation" required>
-	        	  	<input name="title" type="text" data-ng-model="location.db" data-ng-show="settings.enableLocation" required>
+	        	  	<input name="title" data-ng-if="!settings.enableLocation" type="text" data-ng-model="note.title" required>
+	        	  	<input name="title" data-ng-if="settings.enableLocation" type="text" data-ng-model="location.db" required>
 
 	        	  	<i data-ng-show="myForm.title.$valid" data-ng-hide="myForm.title.$error" class="material-icons validation-icon validation-icon-valid">done</i>
 	        	  	<i data-ng-show="myForm.title.$error" data-ng-hide="myForm.title.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
