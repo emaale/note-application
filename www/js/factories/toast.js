@@ -7,10 +7,12 @@ app.factory('toast', function($timeout){
 		"duration": 3000
 	};
 
+	// Sets the callback after the right side "action" has been clicked
 	toast.setActionCb = function(cb) {
 		toast.cb = cb;
 	};
 
+	// Runs the action callback
 	toast.runActionCb = function() {
 		// Run the callback
 		toast.cb();
@@ -19,6 +21,7 @@ app.factory('toast', function($timeout){
 		toast.hide();
 	};
 
+	// Displays the toast
 	toast.show = function() {
 		toast.hidden = false;
 
@@ -29,6 +32,7 @@ app.factory('toast', function($timeout){
 		}, toast.duration);
 	};
 
+	// Hides the toast
 	toast.hide = function() {
 		toast.hidden = true;
 	};

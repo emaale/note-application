@@ -1,3 +1,3 @@
 app.factory('sort', function(){
-  return {options:''};
+  return {options:''}; // Single option to be set
 });

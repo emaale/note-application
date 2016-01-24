@@ -1,29 +1,32 @@
 <section class="note-post">
-  <div class="row">
-    <form name="myForm" class="note-form col s12 note-post">
-    	<div class="row">
-    	    <div class="input-field col s12">
-        	   <h5>Title</h5>
+    <div class="row">
+        <form name="myForm" class="note-form col s12 note-post">
 
-               <input disabled id="title" name="title" type="text" class="validate" data-ng-model="note.title" placeholder="{{ note.title }}" required>
+            <!-- Note Title -->
+        	<div class="row">
+        	    <div class="input-field col s12">
+            	   <h5>Title</h5>
 
-               <i data-ng-show="myForm.title.$valid" data-ng-hide="myForm.title.$error" class="material-icons validation-icon validation-icon-valid">done</i>
-               <i data-ng-show="myForm.title.$error" data-ng-hide="myForm.title.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
-        	</div>
-      	</div>
+                   <input disabled id="title" name="title" type="text" class="validate" data-ng-model="note.title" placeholder="{{ note.title }}" required>
 
-      	<div class="row">
-            <div class="input-field col s12">
-                <h5>Note</h5>
+                   <i data-ng-show="myForm.title.$valid" data-ng-hide="myForm.title.$error" class="material-icons validation-icon validation-icon-valid">done</i>
+                   <i data-ng-show="myForm.title.$error" data-ng-hide="myForm.title.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
+            	</div>
+          	</div>
 
-                <textarea disabled id="body" name="body" class="materialize-textarea" data-ng-model="note.body" placeholder="{{ note.body }}" required></textarea>
+            <!-- Note body -->
+          	<div class="row">
+                <div class="input-field col s12">
+                    <h5>Note</h5>
 
-                <i data-ng-show="myForm.body.$valid" data-ng-hide="myForm.body.$error" class="material-icons validation-icon validation-icon-valid">done</i>
-                <i data-ng-show="myForm.body.$error" data-ng-hide="myForm.body.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
-            </div>
-       </div>
-    </form>
-  </div>
+                    <textarea disabled id="body" name="body" class="materialize-textarea" data-ng-model="note.body" placeholder="{{ note.body }}" required></textarea>
+
+                    <i data-ng-show="myForm.body.$valid" data-ng-hide="myForm.body.$error" class="material-icons validation-icon validation-icon-valid">done</i>
+                    <i data-ng-show="myForm.body.$error" data-ng-hide="myForm.body.$valid" class="material-icons validation-icon validation-icon-invalid">close</i>
+                </div>
+           </div>
+        </form>
+    </div>
 </section>
 
 <!-- Floating button that takes you to the new post page -->

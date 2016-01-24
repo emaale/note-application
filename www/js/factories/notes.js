@@ -4,14 +4,17 @@ app.factory('notes', ['$localStorage', function($localStorage) {
 		firebaseArray: "",
 	};
 
+	// Gets a single note
 	o.get = function(id) {
 		return $localStorage.notes[id]; 
 	};
 
+	// Gets all notes
 	o.getAll = function() {
 		return $localStorage.notes;
 	};
 	
+	// Creates a new note
 	o.post = function(post) {
 		// Save to local storage
 		if(!Array.isArray($localStorage.notes)) $localStorage.notes = []; // Make sure array exists before we push to it
@@ -31,10 +34,12 @@ app.factory('notes', ['$localStorage', function($localStorage) {
 		return post;
 	};
 
+	// Updates a note
 	o.update = function(id, post) {
 		$localStorage.notes[id] = post;
 	};
 
+	// Deletes a note
 	o.delete = function(id) {
 		// Remove from localStorage
 		$localStorage.notes[id].deleted = true;

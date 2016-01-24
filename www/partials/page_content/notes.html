@@ -1,6 +1,7 @@
 <!-- List of notes -->
 <ul class="note-overview collection row">
 	
+	<!-- Is printed out according to the search, and whether or not deleted is false, we conveniently save the results so we can use them later on in the page -->
 	<li class="col s12 m6 l4" data-ng-repeat="note in results = (notes | filter:{ body: search.text, deleted: false } | orderBy:sort.options)">
 		<div class="collection-item">
 			<a href="#" data-ui-sref="note({ id: note.id })">

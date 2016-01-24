@@ -30,6 +30,7 @@ ol {
     margin-top: -15px;
 }
 
+/* Page content */
 .page-content {
     position: absolute;
     top: 64px; /* Height of page_nav */
@@ -49,7 +50,7 @@ nav {
     top: 0;
     z-index: 1000;
 }
-nav h1 { /* Page logo */
+nav h1 { /* Page heading */
     padding-top: 16px;
     padding-left: 20px;
     padding-bottom: 24px;
@@ -67,13 +68,15 @@ nav h1 { /* Page logo */
     padding: 0 20px;
 }
 
-.btn-back {
+.btn-back { /* Back button in nav */
     width: 32px;
     float: left;
 }
 .btn-back i {
     width: 32px;
 }
+
+/* Search bar */
 .search-bar {
     position: absolute;
     left: 0;
@@ -108,6 +111,7 @@ nav h1 { /* Page logo */
     background: #3F51B5;
 }
 
+/* List of notes */
 .collection {
     padding: 5px 10px;
     border: none;
@@ -138,6 +142,7 @@ nav h1 { /* Page logo */
     font-size: 12px;
 }
 
+/* Dropdown menu */
 .dropdown-content {
     position: absolute;
     z-index: 11000; /* Makes sure its always on top of everything else */
@@ -156,6 +161,7 @@ nav h1 { /* Page logo */
     padding-left: 0;
 }
 
+/* Floating button in the bottom right corner of page */
 .btn-floating {
     position: fixed;
     bottom: 20px;
@@ -169,6 +175,7 @@ nav h1 { /* Page logo */
     background: #303F9F;
 }
 
+/* Used for the pages using form */
 .note-post {
     background: white;
     padding: 0 20px 10px 20px;
@@ -219,6 +226,14 @@ nav h1 { /* Page logo */
 .file-field {
     margin-top: 0;
 }
+.error { /* Paragraph to display error during validation of forms */
+    background: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    max-width: 200px;
+    text-align: center;
+}
 
 /* Forms */
 .note-form {
@@ -226,15 +241,6 @@ nav h1 { /* Page logo */
 }
 .ng-touched.ng-invalid {
 
-}
-
-.error {
-    background: #e74c3c;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px;
-    max-width: 200px;
-    text-align: center;
 }
 
 /* Toast */

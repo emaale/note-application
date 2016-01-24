@@ -8,6 +8,7 @@
 
   <content src="index.html"/>
 
+  <!-- Preferences -->
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
   <preference name="target-device" value="universal"/>

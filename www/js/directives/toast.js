@@ -5,7 +5,7 @@ app.directive('toast', [function() {
       controller: function($scope, $attrs, toast) {
          $scope.toast = toast;
 
-         $scope.runCb = function() {
+         $scope.runCb = function() { // Runs the callback
             $scope.toast.runActionCb();
          };
       }
